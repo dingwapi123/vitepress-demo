@@ -4,25 +4,58 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: "/vitepress-demo/",
   head: [["link", { rel: "icon", href: "/vitepress-demo/book.png" }]],
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "技术文档中心",
+  description: "专业的技术文档管理平台",
   themeConfig: {
     logo: '/book.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
+      { text: '首页', link: '/' },
+      { 
+        text: '指南', 
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '什么是文档中心？', link: '/guide/what-is' },
+          { text: '快速开始', link: '/guide/getting-started' },
+          { text: '文档编写', link: '/guide/writing' },
+          { text: '文档管理', link: '/guide/management' }
+        ]
+      },
+      { 
+        text: '参考', 
+        items: [
+          { text: '配置说明', link: '/reference/config' },
+          { text: '主题定制', link: '/reference/theme' }
         ]
       }
     ],
+
+    sidebar: {
+      '/guide/': [
+        {
+          text: '介绍',
+          items: [
+            { text: '什么是文档中心？', link: '/guide/what-is' },
+            { text: '快速开始', link: '/guide/getting-started' }
+          ]
+        },
+        {
+          text: '基础',
+          items: [
+            { text: '文档编写', link: '/guide/writing' },
+            { text: '文档管理', link: '/guide/management' }
+          ]
+        }
+      ],
+      '/reference/': [
+        {
+          text: '参考文档',
+          items: [
+            { text: '配置说明', link: '/reference/config' },
+            { text: '主题定制', link: '/reference/theme' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
@@ -48,5 +81,11 @@ export default defineConfig({
         },
       },
     },
+
+    // 添加文档页脚导航
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    }
   }
 })
