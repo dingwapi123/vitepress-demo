@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 // base: "/vitepress-demo/",
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/vitepress-demo/",
+  base: "/",
   head: [["link", { rel: "icon", href: "/book.png" }]],
   title: "技术文档中心",
   description: "专业的技术文档管理平台",
