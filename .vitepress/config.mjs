@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
-
+// base: "/vitepress-demo/",
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-demo/",
-  head: [["link", { rel: "icon", href: "/vitepress-demo/book.png" }]],
+  head: [["link", { rel: "icon", href: "/book.png" }]],
   title: "技术文档中心",
   description: "专业的技术文档管理平台",
   themeConfig: {
@@ -11,8 +11,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { 
-        text: '指南', 
+      {
+        text: '指南',
         items: [
           { text: '什么是文档中心？', link: '/guide/what-is' },
           { text: '快速开始', link: '/guide/getting-started' },
@@ -20,8 +20,8 @@ export default defineConfig({
           { text: '文档管理', link: '/guide/management' }
         ]
       },
-      { 
-        text: '参考', 
+      {
+        text: '参考',
         items: [
           { text: '配置说明', link: '/reference/config' },
           { text: '主题定制', link: '/reference/theme' }
